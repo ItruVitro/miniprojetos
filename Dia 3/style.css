@@ -1,0 +1,202 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    height: 400px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #282C34;
+}
+
+.content {
+    position: relative;
+    height: 180px;
+    width: 180px;
+    display: flex;
+    background-color: #fff;
+    border-radius: 50%;
+    overflow: hidden;
+    animation: fadeOut 4s cubic-bezier(.4, 0, .49, 1) infinite;
+}
+
+.sky {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(135, 224, 253, 1) 0%, rgba(83, 203, 241, 1) 40%, rgba(5, 171, 224, 1) 100%);
+}
+
+.ground {
+    height: 56px;
+    width: 180px;
+    position: absolute;
+    top: 124px;
+    background-color: #EDDD7C;
+}
+
+.pyramidLeft {
+    height: 56px;
+    width: 76px;
+    background-color: #F6F5F5;
+    clip-path: polygon(67% 0%, 0% 100%, 100% 100%);
+    position: absolute;
+    display: block;
+    top: 69px;
+    left: 36px;
+    z-index: 3;
+    animation: changeColorLeft 4s cubic-bezier(.4, 0, .49, 1) infinite;
+}
+
+.pyramidRight {
+    height: 56px;
+    width: 68px;
+    position: absolute;
+    top: 69px;
+    right: 27px;
+    background-color: #a1a1a1;
+    clip-path: polygon(3% 0%, 23% 100%, 100% 100%);
+    z-index: 2;
+    animation: changeColorRight 4s cubic-bezier(.4, 0, .49, 1) infinite;
+}
+
+.sun {
+    height: 36px;
+    width: 36px;
+    position: absolute;
+    top: 19px;
+    left: 14px;
+    background-color: #ffff00;
+    border-radius: 50%;
+
+
+}
+
+.caminho {
+    border-radius: 50%;
+    height: 219px;
+    width: 219px;
+    position: absolute;
+    top: 24px;
+    left: -19px;
+    animation: moveCircle 4s cubic-bezier(.4, 0, .49, 1) infinite;
+}
+
+
+.pyramidShadow {
+    height: 56px;
+    width: 180px;
+    position: absolute;
+    top: 124px;
+    background-color: rgba(0, 0, 0, 0.3);
+    clip-path: polygon(20% 2%, 85% 0%, 100% 0%);
+    animation: polyShadow 4s cubic-bezier(.4, 0, .49, 1) infinite;
+    transform-origin: 0 0;
+}
+
+@keyframes moveCircle {
+    0% {
+        transform: rotate(-36deg);
+
+    }
+
+    33% {
+        transform: rotate(16deg);
+    }
+
+    100% {
+        transform: rotate(160deg);
+    }
+
+}
+
+@keyframes polyShadow {
+    0% {
+        clip-path: polygon(20% 2%, 85% 0%, 100% 0%);
+        transform: scaleY(1);
+    }
+
+    33% {
+        clip-path: polygon(20% 2%, 84% 0%, 106% 60%);
+        transform: scaleY(1.5);
+    }
+
+    53% {
+        transform: scaleY(0.5);
+    }
+
+
+    68% {
+        transform: scaleY(2);
+
+    }
+
+
+    100% {
+        transform: scaleY(0);
+        clip-path: polygon(20% 2%, 84% 0%, -99% 0%);
+    }
+
+
+}
+
+@keyframes changeColorRight {
+    0% {
+        background-color: #a1a1a1;
+    }
+
+    33% {
+        background-color: #D9D9D9;
+    }
+
+    100% {
+        background-color: #F6F5F5;
+    }
+}
+
+@keyframes changeColorLeft {
+    0% {
+        background-color: #F6F5F5;
+    }
+
+    33% {
+        background-color: #F6F5F5;
+
+    }
+
+    100% {
+        background-color: #a1a1a1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 0;
+    }
+
+    33% {
+        opacity: 1;
+    }
+
+    63% {
+        opacity: 1;
+    }
+
+    83% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}

@@ -1,0 +1,295 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.box {
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+    background-color: #4B4841;
+}
+
+.content {
+    width: 320px;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+    perspective: 800px;
+}
+
+.change {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    transition: all 1s ease-in-out;
+    box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.4);
+    background-color: #ffcc4d;
+}
+
+
+.change:hover {
+    transform: rotateX(180deg);
+    box-shadow: -4px -8px 16px rgb(0 0 0 / 40%);
+}
+
+
+.model1 {
+    width: 190px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 10px;
+    left: 60px;
+    transition: 0.5s all linear;
+    backface-visibility: hidden;
+    overflow: hidden;
+    transform: rotateX(0deg);
+}
+
+.model2 {
+    width: 190px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 10px;
+    left: 60px;
+    transition: 0.5s all linear;
+    backface-visibility: hidden;
+    overflow: hidden;
+    transform: rotateX(180deg);
+
+}
+
+
+.mBike {
+    width: 90%;
+    height: 90%;
+    display: block;
+    animation: drive 0.4s ease infinite alternate-reverse;
+    transform-origin: 0% 90%;
+}
+
+.mHelicopter {
+    width: 70%;
+    height: 70%;
+    display: block;
+    position: absolute;
+    animation: Move 0.8s ease infinite alternate-reverse;
+    z-index: 2;
+
+}
+
+/* ----------------GROUND LINE--------------------*/
+
+.ground {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    position: absolute;
+    top: 118px;
+}
+
+.groundLine {
+    height: 3px;
+    display: block;
+    background-color: #4B4841;
+    border-radius: 25px;
+    position: absolute;
+    animation: run 2s linear infinite;
+}
+
+
+.groundLine:nth-child(1) {
+    width: 3px;
+    animation: run 1s linear infinite;
+
+}
+
+.groundLine:nth-child(2) {
+    width: 6px;
+    animation: run 1.2s linear infinite;
+
+}
+
+.groundLine:nth-child(3) {
+    width: 9px;
+    animation: run 1.5s linear infinite;
+}
+
+.groundLine:nth-child(4) {
+    width: 13px;
+    animation: run 1.7s linear infinite;
+
+}
+
+.groundLine:nth-child(5) {
+    width: 15px;
+    animation: run 1.8s linear infinite;
+}
+
+.groundLine:nth-child(6) {
+    width: 18px;
+    animation: run 2s linear infinite;
+}
+
+.groundLine:nth-child(7) {
+    width: 21px;
+    animation: run 1.1s linear infinite;
+}
+
+.groundLine:nth-child(8) {
+    width: 16px;
+    animation: run 1.2s linear infinite;
+
+}
+
+.groundLine:nth-child(9) {
+    width: 10px;
+    animation: run 1.4s linear infinite;
+}
+
+.groundLine:nth-child(10) {
+    width: 7px;
+    animation: run 1.3s linear infinite;
+}
+
+/* ----------------SKY LINE--------------------*/
+
+.sky {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+}
+
+.skyLine {
+    height: 3px;
+    display: block;
+    background-color: #4B4841;
+    border-radius: 25px;
+    position: absolute;
+}
+
+
+.skyLine:nth-child(1) {
+    width: 17px;
+    top: 80px;
+    animation: run 1s linear infinite;
+
+}
+
+.skyLine:nth-child(2) {
+    width: 22px;
+    top: 20px;
+    animation: run 1.2s linear infinite;
+
+}
+
+.skyLine:nth-child(3) {
+    width: 19px;
+    top: 30px;
+    animation: run 1.5s linear infinite;
+}
+
+.skyLine:nth-child(4) {
+    width: 13px;
+    top: 36px;
+    animation: run 1.7s linear infinite;
+
+}
+
+.skyLine:nth-child(5) {
+    width: 15px;
+    top: 40px;
+    animation: run 1.8s linear infinite;
+}
+
+.skyLine:nth-child(6) {
+    width: 18px;
+    top: 52px;
+    animation: run 2s linear infinite;
+}
+
+.skyLine:nth-child(7) {
+    width: 21px;
+    top: 60px;
+    animation: run 1.1s linear infinite;
+}
+
+.skyLine:nth-child(8) {
+    width: 16px;
+    top: 75px;
+    animation: run 1.2s linear infinite;
+
+}
+
+.skyLine:nth-child(9) {
+    width: 10px;
+    top: 90px;
+    animation: run 1.4s linear infinite;
+}
+
+.skyLine:nth-child(10) {
+    width: 24px;
+    top: 120px;
+    animation: run 1.3s linear infinite;
+}
+
+@keyframes drive {
+    0% {
+        transform: scaleY(0.97);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+@keyframes Move {
+    0% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(10);
+    }
+}
+
+@keyframes run {
+    0% {
+        transform: translate(180px, 0px);
+    }
+
+
+    100% {
+        transform: translate(-100px, 0px);
+
+    }
+}
+
+/*background-color: #ffcc4d;*/

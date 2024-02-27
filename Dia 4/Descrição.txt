@@ -1,0 +1,3 @@
+O dia quatro foi para fazer uma animação em sequência, na qual ela precisaria
+ser executada infinitamente e após terminar de executar, alternar e executar a animação
+de trás para frente. 

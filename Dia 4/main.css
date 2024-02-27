@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #E56262;
+}
+
+.circle {
+    position: absolute;
+    display: block;
+    transform: scale(0);
+    border-radius: 50%;
+    background-color: #fff;
+
+}
+
+.CircleOne {
+    z-index: 1;
+    animation: growUpBig 2s cubic-bezier(.09, .6, .48, .92) infinite alternate both;
+    width: 80px;
+    height: 80px;
+}
+
+
+.CircleTwo {
+    z-index: 2;
+    animation: growUpMiddle 2s cubic-bezier(.09, .6, .48, .92) infinite alternate both;
+    width: 60px;
+    height: 60px;
+}
+
+
+.CircleThree {
+    z-index: 3;
+    animation: growUpSmall 2s cubic-bezier(.09, .6, .48, .92) infinite alternate both;
+    width: 30px;
+    height: 30px;
+}
+
+@keyframes growUpBig {
+
+    0%,
+    10% {
+        transform: scale(0);
+        box-shadow: 8px 6px 10px rgba(0, 0, 0, 0.10);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: 8px 6px 10px rgba(0, 0, 0, 0.15);
+
+    }
+
+}
+
+
+
+@keyframes growUpMiddle {
+
+    0%,
+    40% {
+        transform: scale(0);
+        box-shadow: 20px 10px 30px rgb(0 0 0 / 28%);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: 20px 10px 30px rgb(0 0 0 / 38%);
+    }
+}
+
+
+
+
+@keyframes growUpSmall {
+
+    70% {
+        transform: scale(0);
+        box-shadow: 8px 6px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: 8px 6px 10px rgba(0, 0, 0, 0.25);
+    }
+}

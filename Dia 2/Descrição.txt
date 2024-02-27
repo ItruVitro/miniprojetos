@@ -1,0 +1,3 @@
+O dia dois foi para replicar um botão de menu.
+Ao clicar no botão ele faz uma animação e fica estático,
+após clicar novamente ele executa outra animação e volta ao estado original.

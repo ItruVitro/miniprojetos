@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes MoviLineDown {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(0, 20px) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(0, 20px) rotate(45deg);
+    }
+
+}
+
+@keyframes MoviLineUp {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(0, -20px) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(0, -20px) rotate(135deg);
+    }
+
+}
+
+@keyframes ScaleLineDown {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    to {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+
+}
+
+@keyframes ReMoviLineDown {
+    0% {
+        transform: translate(0, 20px) rotate(45deg)
+    }
+
+    50% {
+        transform: translate(0, 20px) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(0, 0);
+        ;
+    }
+
+}
+
+@keyframes ReMoviLineUp {
+    0% {
+        transform: translate(0, -20px) rotate(135deg)
+    }
+
+    50% {
+        transform: translate(0, -20px) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+
+}
+
+@keyframes ReScaleLineDown {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+
+}
+
+
+
+
+.container {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    width: 400px;
+    height: 400px;
+    background-color: #3FAF82;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.menu input {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+}
+
+.menu {
+    width: 80px;
+    height: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: space-around;
+    cursor: pointer;
+}
+
+
+.lines {
+    width: 100%;
+    height: 7px;
+    border-radius: 3px;
+    background-color: #fff;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.MoviLineDown {
+    animation: MoviLineDown 0.7s forwards cubic-bezier(0.30, 1, 0.70, 1);
+}
+
+.ScaleLineDown {
+    animation: ScaleLineDown 0.7s forwards cubic-bezier(0.30, 1, 0.70, 1);
+}
+
+.MoviLineUp {
+    animation: MoviLineUp 0.7s forwards cubic-bezier(0.30, 1, 0.70, 1);
+}
+
+.ReMoviLineDown {
+    animation: ReMoviLineDown 0.7s cubic-bezier(0.30, 1, 0.70, 1) forwards;
+}
+
+.ReScaleLineDown {
+    animation: ReScaleLineDown 0.7s cubic-bezier(0.30, 1, 0.70, 1)forwards;
+}
+
+.ReMoviLineUp {
+    animation: ReMoviLineUp 0.7s cubic-bezier(0.30, 1, 0.70, 1) forwards;
+}
+
+
+/*  estado inicial 
+    estado animado
+    estado pausado
+    estado animado

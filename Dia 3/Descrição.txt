@@ -1,0 +1,2 @@
+O dia três foi para replicar uma animação em que a sombra, acompanhasse
+a movimentação do sol.

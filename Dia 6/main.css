@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background: linear-gradient(to top right, #EEBE6C 0%, #CA7C4E 100%);
+}
+
+.content {
+    width: 320px;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 10px 16px 18px rgb(0 0 0 / 20%);
+}
+
+.boxProfile {
+    width: 62.5%;
+    height: 100%;
+    display: block;
+
+}
+
+.profile {
+    position: relative;
+    width: 83px;
+    height: 83px;
+    display: block;
+    margin: 0 auto;
+    top: 35px;
+    left: 0;
+    cursor: pointer;
+}
+
+.profile:hover .profileArc1 {
+    transform: rotate(405deg);
+}
+
+.profile:hover .profileArc2 {
+    transform: rotate(-495deg) scale(0.9);
+}
+
+
+.profileArc1 {
+    position: absolute;
+    top: 0;
+    left: 2px;
+    width: 82px;
+    height: 82px;
+    display: block;
+    border-radius: 50%;
+    fill: none;
+    stroke: #786450;
+    stroke-width: 1px;
+    transform: rotate(45deg);
+    transition: transform 1.5s cubic-bezier(.32, .53, .27, .74);
+}
+
+
+.profileArc2 {
+    position: absolute;
+    top: 0;
+    left: 2px;
+    width: 82px;
+    height: 82px;
+    display: block;
+    border-radius: 50%;
+    fill: none;
+    stroke: #786450;
+    stroke-width: 1px;
+    transform: rotate(-135deg) scale(0.9);
+    transition: transform 1.5s cubic-bezier(.32, .53, .27, .74);
+}
+
+.profilePicture {
+    position: absolute;
+    top: 6px;
+    left: 8px;
+    width: 70px;
+    height: 70px;
+    scale: 0.95;
+    display: block;
+    border-radius: 50%;
+    background-color: #ADADAD;
+    background-image: url(pexels-moose-photos-1587009.jpg);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+
+.profileInfo {
+    width: 100%;
+    height: 165px;
+    margin-top: 52px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profileInfo p {
+    margin-bottom: 35px;
+}
+
+.socialDatas {
+    width: 37.5%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.socialInfo {
+    width: 100%;
+    height: 33%;
+    background-color: #F5E8DF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease-out;
+}
+
+.socialInfo:hover {
+    background-color: #E1CFC2;
+}
+
+.socialInfo:nth-child(1) {
+    border-radius: 0 4px 0 0;
+}
+
+.socialInfo:nth-child(3) {
+    border-radius: 0 0 4px 0;
+}
+
+
+/* UTILITARIAS */
+
+.title {
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #786450;
+
+}
+
+.subtitle {
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    color: #786450;
+
+}
+
+.btn-medium {
+    width: 119px;
+    height: 29px;
+    border: 1px solid #786450;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    color: #786450;
+    transition: background-color 0.3s ease-out;
+}
+
+.btn-medium:hover {
+    background-color: #786450;
+    color: #fff;
+}

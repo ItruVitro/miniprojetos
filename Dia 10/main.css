@@ -1,0 +1,244 @@
+ @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ @keyframes fullLine {
+     0% {
+         stroke-dashoffset: 1000;
+
+     }
+
+     100% {
+         stroke-dashoffset: -1000;
+
+     }
+
+ }
+
+ @keyframes beat {
+
+     0% {
+         transform: scale(0.9);
+     }
+
+     100% {
+         transform: scale(1.1);
+     }
+ }
+
+ .container {
+     width: 100vw;
+     height: 100vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .box {
+     width: 400px;
+     height: 400px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     border-radius: 5px;
+     box-shadow: 8px 12px 12px rgba(0, 0, 0, 0.2);
+     background-color: #6e6e6e;
+ }
+
+ .firstBase {
+     width: 225px;
+     height: 225px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     border-radius: 50%;
+     background-color: #3A3A3A;
+ }
+
+ .secondBase {
+     position: relative;
+     width: 210px;
+     height: 210px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     border-radius: 50%;
+     background-color: #242424;
+ }
+
+ .cicloBase {
+     position: absolute;
+     width: 200px;
+     height: 200px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .cicloClock {
+     stroke: #2ccb69;
+     stroke-width: 3;
+     fill: none;
+     stroke-dasharray: 1000;
+     stroke-dashoffset: 1000;
+     transform-origin: 50% 50%;
+     transform: rotate(-90deg);
+     animation: fullLine 3s linear infinite;
+ }
+
+ .pointClock {
+     stroke: #fff;
+     stroke-width: 0px;
+     fill: none;
+     stroke-dasharray: 0;
+     stroke-dashoffset: 0;
+     transform-origin: 50% 50%;
+     transform: rotate(-90deg);
+ }
+
+ .cicloDotted {
+     position: absolute;
+     width: 180px;
+     height: 180px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     border-radius: 50%;
+     box-sizing: border-box;
+ }
+
+ .setPoint {
+     position: absolute;
+     width: 180px;
+     height: 180px;
+     display: block;
+
+ }
+
+ .setPoint:nth-child(1) span {
+     background-color: #2ccb69;
+ }
+
+ .setPoint:nth-child(2) {
+     transform: rotate(45deg);
+ }
+
+ .setPoint:nth-child(3) {
+     transform: rotate(68deg);
+
+ }
+
+ .setPoint:nth-child(4) {
+     transform: rotate(113deg);
+
+ }
+
+ .setPoint:nth-child(5) {
+     transform: rotate(125deg);
+
+ }
+
+ .setPoint:nth-child(6) {
+     transform: rotate(147deg);
+
+ }
+
+ .setPoint:nth-child(7) {
+     transform: rotate(169deg);
+
+ }
+
+ .setPoint:nth-child(8) {
+     transform: rotate(191deg);
+
+ }
+
+ .point {
+     width: 2px;
+     height: 2px;
+     position: absolute;
+     top: 0;
+     left: 0;
+     display: block;
+     border-radius: 50%;
+     background-color: #fff;
+ }
+
+ .setPoint .point:nth-child(1) {
+     top: -3px;
+     left: 89px;
+
+ }
+
+ .setPoint .point:nth-child(2) {
+     top: 181px;
+     left: 89px;
+ }
+
+ .setPoint .point:nth-child(3) {
+     top: 89px;
+     left: 181px;
+ }
+
+ .setPoint .point:nth-child(4) {
+     top: 89px;
+     left: -3px;
+ }
+
+ .dataTime {
+     width: auto;
+     height: 170px;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     border-radius: 50%;
+     color: #fff;
+     font-family: 'Open Sans', Helvetica, sans-serif;
+ }
+
+ .day {
+     width: 100px;
+     font-weight: 400;
+     font-size: 12px;
+     line-height: 100%;
+     text-transform: uppercase;
+     margin-bottom: 3px;
+     display: flex;
+     justify-content: center;
+ }
+
+ .currentTime {
+     font-weight: 700;
+     font-size: 40px;
+     line-height: 100%;
+     text-transform: uppercase;
+     margin-bottom: 5px;
+ }
+
+ .healthInfo {
+     display: flex;
+     flex-direction: row;
+     font-weight: 400;
+     font-size: 12px;
+     line-height: 100%;
+     text-transform: uppercase;
+ }
+
+ .healthInfo ion-icon {
+     margin-right: 2px;
+     color: #D26D57;
+ }
+
+ .heartbeat {
+     margin-right: 12px;
+ }
+
+ .beatAnim {
+     animation: beat 0.5s infinite ease alternate;
+ }

@@ -1,0 +1,143 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    border-radius: 5px;
+    filter: contrast(30);
+}
+
+.bubbleBall {
+    width: 400px;
+    height: 400px;
+    padding: 100px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: blur(10px)
+}
+
+.circle {
+    position: absolute;
+    display: flex;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.ball {
+    height: 100px;
+    width: 100px;
+}
+
+.mediumBall {
+    width: 50px;
+    height: 50px;
+}
+
+.smallBall {
+    width: 25px;
+    height: 25px;
+}
+
+.circle:nth-child(2) {
+    transform-origin: 50% 80%;
+    animation: leftBall 2.5s linear infinite;
+
+}
+
+.circle:nth-child(3) {
+    transform-origin: 17% 80%;
+    animation: leftBall 2.5s linear infinite;
+}
+
+.circle:nth-child(4) {
+    transform-origin: 20% -149%;
+    animation: leftBall 3s linear infinite;
+}
+
+.circle:nth-child(5) {
+    transform-origin: -250% 50%;
+    animation: leftBall 4s linear infinite;
+}
+
+.circle:nth-child(6) {
+    transform-origin: 20% 149%;
+    animation: leftBall 5s linear infinite;
+}
+
+.circle:nth-child(7) {
+    transform-origin: 20% -149%;
+    animation: scaleBall 3s linear infinite;
+}
+
+.circle:nth-child(8) {
+    transform-origin: 20% 249%;
+    animation: leftBall 6s linear infinite;
+}
+
+@keyframes leftBall {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes scaleBall {
+    0% {
+        transform: rotate(0deg) scale(0.6);
+    }
+
+    100% {
+        transform: rotate(360deg) scale(0.6);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1)
+    }
+
+    0% {
+        transform: scale(1.9)
+    }
+
+    0% {
+        transform: scale(0.6)
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+.pulseBall {
+    animation: pulse 1.3s ease-in-out infinite alternate;
+}
+
+.leftSpin {
+    animation: leftBall 2.5s linear infinite;
+}
+
+.rightSpin {
+    animation: rightBall 2s linear infinite;
+}
